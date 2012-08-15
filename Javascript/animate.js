@@ -43,7 +43,7 @@
 	function retroClock(){
 		
 		// get new time
-		 now = new Date();
+		 var now = new Date();
 		 h = now.getHours();
 		 m1 = now.getMinutes() / 10;
 		 m2 = now.getMinutes() % 10;
