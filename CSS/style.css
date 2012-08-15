@@ -1,9 +1,6 @@
 @charset "utf-8";
 /* Animated Flip Down Clock Style */
 
-body{
-	background:#000;
-}
 
 #wrapper{
 	position:absolute;
