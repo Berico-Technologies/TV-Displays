@@ -88,6 +88,6 @@
 		
 	}
 	
-	setInterval('retroClock()', 1000);
+	setInterval(retroClock(), 1000);
 			
 	
