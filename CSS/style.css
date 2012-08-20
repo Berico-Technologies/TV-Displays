@@ -1,19 +1,10 @@
 @charset "utf-8";
 /* Animated Flip Down Clock Style */
 
-
-#wrapper{
-	position:absolute;
-	top: 100px;
-	left:400px;
-}
-
 #front{
 	position:absolute;
 	top:0px;
 }
-
-
 
 #upperHalf, #upperHalfBack{
 	vertical-align:bottom;
@@ -22,10 +13,6 @@
 #lowerHalf, #lowerHalfBack{
 	vertical-align:top;
 }
-
-
-
-
 #upperHalf img{
 	position:relative;
 	height:64px;
@@ -39,7 +26,6 @@
 	vertical-align:top;
 	visibility:visible;
 }
-
 	
 #lowerHalfBack img{
 	position:relative;
@@ -62,7 +48,3 @@
 	width:64px;
 }
 	
-
-
-	
-
