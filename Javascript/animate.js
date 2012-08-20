@@ -64,23 +64,23 @@
 		 //change pads
 		 
 		 if( h != h_current){
-			flip('hoursUp', 'hoursDown', h, 'Single/Up/'+ap+'/', 'Single/Down/'+ap+'/');
+			flip('hoursUp', 'hoursDown', h, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Single/Up/'+ap+'/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Single/Down/'+ap+'/');
 			h_current = h;
 		}
 		
 		if( m2 != m2_current){
-			flip('minutesUpRight', 'minutesDownRight', m2, 'Double/Up/Right/', 'Double/Down/Right/');
+			flip('minutesUpRight', 'minutesDownRight', m2, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Right/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Right/');
 			m2_current = m2;
 			
-			flip('minutesUpLeft', 'minutesDownLeft', m1, 'Double/Up/Left/', 'Double/Down/Left/');
+			flip('minutesUpLeft', 'minutesDownLeft', m1, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Left/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Left/');
 			m1_current = m1;
 		}
 		
 		 if (s2 != s2_current){
-			flip('secondsUpRight', 'secondsDownRight', s2, 'Double/Up/Right/', 'Double/Down/Right/');
+			flip('secondsUpRight', 'secondsDownRight', s2, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Right/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Right/');
 			s2_current = s2;
 			
-			flip('secondsUpLeft', 'secondsDownLeft', s1, 'Double/Up/Left/', 'Double/Down/Left/');
+			flip('secondsUpLeft', 'secondsDownLeft', s1, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Left/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Left/');
 			s1_current = s1;
 		}
 		
