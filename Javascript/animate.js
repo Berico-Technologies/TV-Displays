@@ -45,6 +45,7 @@
 		// get new time
 		 var now;
 		 var h;
+		 var m1;
 		 now = new Date();
 		 h = now.getHours();
 		 m1 = now.getMinutes() / 10;
