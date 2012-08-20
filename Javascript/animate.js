@@ -9,15 +9,22 @@
 
 	
 	function flip (upperId, lowerId, changeNumber, pathUpper, pathLower){
+		console.log(upperId);
+		
+		upperId = "#"+upperId;
+		lowerId = "#"+lowerId;
+		
+		var $u = $(upperId);
+		var $l = $(lowerId);
 		var upperBackId = upperId+"Back";
-		$(upperId).src = $(upperBackId).src;
-		$(upperId).setStyle("height", "64px");
-		$(upperId).setStyle("visibility", "visible");
+		$u.src = $(upperBackId).src;
+		$u.setStyle("height", "64px");
+		$u.setStyle("visibility", "visible");
 		$(upperBackId).src = pathUpper+parseInt(changeNumber)+".png";
 		
-		$(lowerId).src = pathLower+parseInt(changeNumber)+".png";
-		$(lowerId).setStyle("height", "0px");
-		$(lowerId).setStyle("visibility", "visible");
+		$l.src = pathLower+parseInt(changeNumber)+".png";
+		$l.setStyle("height", "0px");
+		$l.setStyle("visibility", "visible");
 		
 		var flipUpper = new Fx.Tween(upperId, {duration: 200, transition: Fx.Transitions.Sine.easeInOut});
 		flipUpper.addEvents({
@@ -27,8 +34,8 @@
 						'complete': function(){	
 							lowerBackId = lowerId+"Back";
 							$(lowerBackId).src = $(lowerId).src;
-							$(lowerId).setStyle("visibility", "hidden");
-							$(upperId).setStyle("visibility", "hidden");
+							$l.setStyle("visibility", "hidden");
+							$u.setStyle("visibility", "hidden");
 						}				});					
 					flipLower.start('height', 64);
 					
@@ -43,6 +50,13 @@
 	function retroClock(){
 		
 		// get new time
+		 var now;
+		 var h;
+		 var m1;
+		 var m2;
+		 var s1;
+		 var s2;
+		 var ap;
 		 now = new Date();
 		 h = now.getHours();
 		 m1 = now.getMinutes() / 10;
@@ -62,23 +76,23 @@
 		 //change pads
 		 
 		 if( h != h_current){
-			flip('hoursUp', 'hoursDown', h, 'Single/Up/'+ap+'/', 'Single/Down/'+ap+'/');
+			flip('hoursUp', 'hoursDown', h, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Single/Up/'+ap+'/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Single/Down/'+ap+'/');
 			h_current = h;
 		}
 		
 		if( m2 != m2_current){
-			flip('minutesUpRight', 'minutesDownRight', m2, 'Double/Up/Right/', 'Double/Down/Right/');
+			flip('minutesUpRight', 'minutesDownRight', m2, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Right/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Right/');
 			m2_current = m2;
 			
-			flip('minutesUpLeft', 'minutesDownLeft', m1, 'Double/Up/Left/', 'Double/Down/Left/');
+			flip('minutesUpLeft', 'minutesDownLeft', m1, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Left/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Left/');
 			m1_current = m1;
 		}
 		
 		 if (s2 != s2_current){
-			flip('secondsUpRight', 'secondsDownRight', s2, 'Double/Up/Right/', 'Double/Down/Right/');
+			flip('secondsUpRight', 'secondsDownRight', s2, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Right/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Right/');
 			s2_current = s2;
 			
-			flip('secondsUpLeft', 'secondsDownLeft', s1, 'Double/Up/Left/', 'Double/Down/Left/');
+			flip('secondsUpLeft', 'secondsDownLeft', s1, 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Up/Left/', 'https://raw.github.com/Berico-Technologies/TV-Displays/master/images/Double/Down/Left/');
 			s1_current = s1;
 		}
 		
@@ -88,6 +102,6 @@
 		
 	}
 	
-	setInterval('retroClock()', 1000);
+	setInterval(retroClock(), 1000);
 			
 	
