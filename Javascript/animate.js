@@ -9,15 +9,19 @@
 
 	
 	function flip (upperId, lowerId, changeNumber, pathUpper, pathLower){
+		upperId = "#"+upperId;
+		lowerId = "#"+lowerId;
+		var $u = $(upperId);
+		var $l = $(lowerId);
 		var upperBackId = upperId+"Back";
-		$(upperId).src = $(upperBackId).src;
-		$(upperId).setStyle("height", "64px");
-		$(upperId).setStyle("visibility", "visible");
+		$u.src = $(upperBackId).src;
+		$u.setStyle("height", "64px");
+		$u.setStyle("visibility", "visible");
 		$(upperBackId).src = pathUpper+parseInt(changeNumber)+".png";
 		
-		$(lowerId).src = pathLower+parseInt(changeNumber)+".png";
-		$(lowerId).setStyle("height", "0px");
-		$(lowerId).setStyle("visibility", "visible");
+		$l.src = pathLower+parseInt(changeNumber)+".png";
+		$l.setStyle("height", "0px");
+		$l.setStyle("visibility", "visible");
 		
 		var flipUpper = new Fx.Tween(upperId, {duration: 200, transition: Fx.Transitions.Sine.easeInOut});
 		flipUpper.addEvents({
@@ -27,8 +31,8 @@
 						'complete': function(){	
 							lowerBackId = lowerId+"Back";
 							$(lowerBackId).src = $(lowerId).src;
-							$(lowerId).setStyle("visibility", "hidden");
-							$(upperId).setStyle("visibility", "hidden");
+							$l.setStyle("visibility", "hidden");
+							$u.setStyle("visibility", "hidden");
 						}				});					
 					flipLower.start('height', 64);
 					
