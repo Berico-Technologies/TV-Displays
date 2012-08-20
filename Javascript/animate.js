@@ -46,6 +46,9 @@
 		 var now;
 		 var h;
 		 var m1;
+		 var m2;
+		 var s1;
+		 var s2;
 		 now = new Date();
 		 h = now.getHours();
 		 m1 = now.getMinutes() / 10;
