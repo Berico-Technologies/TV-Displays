@@ -9,9 +9,11 @@
 
 	
 	function flip (upperId, lowerId, changeNumber, pathUpper, pathLower){
+		console.log(upperId);
+		
 		upperId = "#"+upperId;
 		lowerId = "#"+lowerId;
-		console.log(upperId);
+		
 		var $u = $(upperId);
 		var $l = $(lowerId);
 		var upperBackId = upperId+"Back";
