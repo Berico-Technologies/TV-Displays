@@ -1,8 +1,8 @@
 .clock{
 	/* The .clock div. Created dynamically by jQuery */
 	background-color:#252525;
-	height:200px;
-	width:200px;
+	height:180px;
+	width:180px;
 	position:relative;
 	overflow:hidden;
 	float:left;
@@ -11,8 +11,8 @@
 .clock .rotate{
 	/* There are two .rotate divs - one for each half of the background */
 	position:absolute;
-	width:200px;
-	height:200px;
+	width:180px;
+	height:180px;
 	top:0;
 	left:0;
 }
@@ -24,7 +24,7 @@
 
 .clock .bg, .clock .front{
 	width:100px;
-	height:200px;
+	height:180px;
 	background-color:#252525;
 	position:absolute;
 	top:0;
@@ -33,7 +33,7 @@
 .clock .display{
 	/* Holds the number of seconds, minutes or hours respectfully */
 	position:absolute;
-	width:200px;
+	width:180px;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	z-index:20;
 	color:#F5F5F5;
